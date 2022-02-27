@@ -3,41 +3,45 @@
   "blocks": [
     {
       "alignment": "left",
-      "newline": false,
       "segments": [
         {
-          "foreground": "#9B6BDF",
+          "foreground": "#ffffff",
           "properties": {
-            "display_host": true,
-            "postfix": " ❯ ",
-            "prefix": ""
+            "display_host": false,
+            "template": " \u25b2 {{ if .SSHSession }} \uf817 {{ end }}{{ .UserName }}"
           },
-          "style":"powerline",
+          "style": "powerline",
           "type": "session"
         },
         {
-          "foreground": "#66cea3",
+          "foreground": "#ffffff",
           "properties": {
-            "postfix": " ❯ ",
-            "prefix": "",
-            "style": "folder"
+            "style": "folder",
+            "template": " {{ if ne .Path \"~\" }}- {{end}}{{ .Path }} "
           },
-          "style":"powerline",
+          "style": "powerline",
           "type": "path"
         },
         {
           "foreground": "#43CCEA",
           "properties": {
             "branch_icon": "",
-            "display_status_detail": true,
-            "postfix": " ❯ ",
-            "prefix": ""
+            "template": "[{{ .HEAD }}] "
           },
-          "style":"powerline",
+          "style": "powerline",
           "type": "git"
+        },
+        {
+          "foreground": "#ffffff",
+          "properties": {
+            "template": ": "
+          },
+          "style": "powerline",
+          "type": "text"
         }
       ],
       "type": "prompt"
     }
-  ]
+  ],
+  "version": 1
 }
