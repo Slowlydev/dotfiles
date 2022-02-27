@@ -6,7 +6,7 @@ echo "oh-my-posh : slowlydev.omp.json"
 cp ~/.slowlydev.omp.json ./oh-my-posh/
 
 echo "hyper : hyper.js"
-cp ~/hyper.js ./hyper/
+cp ~/.hyper.js ./hyper/
 
 echo "scripts : /scripts"
 cp ~/scripts/* ./scripts/
