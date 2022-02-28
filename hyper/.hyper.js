@@ -133,7 +133,8 @@ module.exports = {
         hypest: {
             darkmode: true,
             vibrancy: true,
-            vibrancyLevel: 0.1,
+            vibrancyLevel: 0.4,
+            accentColor: 'magenta'
         }
     },
     // a list of plugins to fetch and install from npm
